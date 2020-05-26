@@ -1,6 +1,6 @@
 <?php
 
-namespace enesyurtlu\PlugMan\Facades;
+namespace enesyurtlu\plugman\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

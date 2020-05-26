@@ -1,6 +1,6 @@
 <?php
 
-namespace enesyurtlu\PlugMan;
+namespace enesyurtlu\plugman;
 
 use enesyurtlu\PlugMan\Contracts\PlugManContract;
 use Illuminate\Support\Facades\Config;

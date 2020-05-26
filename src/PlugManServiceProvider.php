@@ -1,6 +1,6 @@
 <?php
 
-namespace enesyurtlu\PlugMan;
+namespace enesyurtlu\plugman;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Config;
@@ -16,16 +16,18 @@ class PlugManServiceProvider extends ServiceProvider
             self::CONFIG_PATH => config_path('plugman.php'),
         ], 'config');
 
-        $this->app->alias('PlugMan', 'enesyurtlu\PlugMan\Facade\PlugManFacade');
+        $this->app->alias('PlugMan', 'enesyurtlu\plugman\Facade\PlugManFacade');
 
         $this->addToBlade(['plugin', 'PlugMan::render(%s);']);
     }
 
-    protected function registerController($array) {
-        $this->app->alias($array[0], 'Plugins\\'. $array[1] );
+    protected function registerController($array)
+    {
+        $this->app->alias($array[0], 'Plugins\\' . $array[1]);
     }
 
-    protected function discoverPlugins() {
+    protected function discoverPlugins()
+    {
         Config::get("plugman.folder");
     }
 
@@ -39,7 +41,8 @@ class PlugManServiceProvider extends ServiceProvider
         Blade::directive($array[0], function ($data) use ($array) {
             if (!$data) return '<?php echo ' . $array[2] . ' ?>';
 
-            return sprintf('<?php echo ' . $array[1] . ' ?>',
+            return sprintf(
+                '<?php echo ' . $array[1] . ' ?>',
                 null !== $data ? $data : "get_defined_vars()['__data']"
             );
         });

@@ -1,8 +1,7 @@
 <?php
 
-namespace enesyurtlu\PlugMan\Contracts;
+namespace enesyurtlu\plugman\Contracts;
 
 interface PlugManContract
 {
-
 }
