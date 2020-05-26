@@ -1,57 +1,55 @@
 {
-  "name": "enesyurtlu/PlugMan",
-  "description": "A Plugin Manager for Laravel 6.x",
-  "license": "MIT",
-  "keywords": [
-    "plugman"
-  ],
-  "type": "library",
-  "authors": [
-    {
-      "name": "Enes Yurtlu",
-      "email": "enesyurtlu.dh@gmail.com"
-    }
-  ],
-  "require": {
-    "php": ">=7.2",
-    "illuminate/support": "^6.0"
-  },
-  "require-dev": {
-    "orchestra/testbench": "^4.0",
-    "phpunit/phpunit": "^8.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "enesyurtlu\\PlugMan\\": "src"
+    "name": "enesyurtlu/plugman",
+    "description": "A Plugin Manager for Laravel 6.x",
+    "license": "MIT",
+    "keywords": [
+        "plugman"
+    ],
+    "type": "library",
+    "authors": [{
+        "name": "Enes Yurtlu",
+        "email": "enesyurtlu.dh@gmail.com"
+    }],
+    "require": {
+        "php": ">=7.2",
+        "illuminate/support": "^6.0"
     },
-    "files": [
-      "src/helpers.php"
-    ]
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "enesyurtlu\\PlugMan\\Tests\\": "tests"
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
     },
-    "files": [
-      "src/helpers.php"
-    ]
-  },
-  "scripts": {
-    "phpunit": "phpunit"
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "enesyurtlu\\PlugMan\\PlugManServiceProvider"
-      ],
-      "aliases": {
-        "PlugMan": "enesyurtlu\\PlugMan\\Facades\\PlugManFacade"
-      }
+    "autoload": {
+        "psr-4": {
+            "enesyurtlu\\PlugMan\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "enesyurtlu\\PlugMan\\Tests\\": "tests"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "scripts": {
+        "phpunit": "phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "enesyurtlu\\PlugMan\\PlugManServiceProvider"
+            ],
+            "aliases": {
+                "PlugMan": "enesyurtlu\\PlugMan\\Facades\\PlugManFacade"
+            }
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
     }
-  },
-  "config": {
-    "preferred-install": "dist",
-    "sort-packages": true,
-    "optimize-autoloader": true
-  }
 }
