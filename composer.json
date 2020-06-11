@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "enesyurtlu\\PlugMan\\": "src"
+            "enesyurtlu\\plugman\\": "src"
         },
         "files": [
             "src/helpers.php"
@@ -28,7 +28,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "enesyurtlu\\PlugMan\\Tests\\": "tests"
+            "enesyurtlu\\plugman\\Tests\\": "tests"
         },
         "files": [
             "src/helpers.php"
@@ -40,10 +40,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "enesyurtlu\\PlugMan\\PlugManServiceProvider"
+                "enesyurtlu\\plugman\\PlugManServiceProvider"
             ],
             "aliases": {
-                "PlugMan": "enesyurtlu\\PlugMan\\Facades\\PlugManFacade"
+                "PlugMan": "enesyurtlu\\plugman\\Facades\\PlugManFacade"
             }
         }
     },
